@@ -1,0 +1,13 @@
+<QuerySet>
+  <Query IsView="False" IsSP="False">
+    <SQL>create table table1
+(pf varchar(50), hscalc varchar(50), gender varchar(50));
+
+copy table1 from 's3://slstorage1/M358K_11-1_grade_data.tab'
+delimiter '\t'
+iam_role 'arn:aws:iam::149462461270:role/RedshiftcopyLoad'
+
+select * from table1</SQL>
+    <Name>Tab 1</Name>
+  </Query>
+</QuerySet>
